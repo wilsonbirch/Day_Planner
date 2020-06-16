@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Day Planner</title>
+      <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!--header of the work day planner stating todays date and the purpose-->
+    <header style="text-align: center;">
+        <h1>Work Day Planner</h1>
+
+        <h5> A simple calendar app that lets you keep track of your day:</h5>
+
+        <h5 id = "date-time">*Todays date*</h5>
+    </header>
+
+    <!--main body of the day planner-->
+    <main class="container col-xl">
+
+        <!--line to break up the header content from the planner content-->
+        <hr></hr>
+
+        <!--row for a single hour in the day planner () -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">9am</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="9am" style = "height: 60px" >
+
+                        <form class="taskform" id = "nineamtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+        <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">10am</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="10am" style = "height: 60px" >
+
+                        <form class="taskform" id = "tenamtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">11am</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="11am" style = "height: 60px" >
+
+                        <form class="taskform" id="elevenamtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">12pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="12pm" style = "height: 60px" >
+
+                        <form class="taskform" id="twelvepmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">1pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="1pm" style = "height: 60px" >
+
+                        <form class="taskform" id="onepmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">2pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="2pm" style = "height: 60px" >
+
+                        <form class="taskform" id="twopmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text" >3pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="3pm" style = "height: 60px" >
+
+                        <form class="taskform" id="threepmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">4pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="4pm" style = "height: 60px" >
+
+                        <form class="taskform" id="fourpmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+                <!--row for a single hour in the day planner -->
+        <section class = "row">
+            <!--side column used for spacing-->
+            <aside class="col-1"></aside>
+
+            <!--main column that contains the tasks for the hour-->
+            <article class="col-10">
+
+                <!--another row to keep the 3 sections on one line-->
+                <section class = "row">
+
+                    <!--the time of day is displayed here-->
+                    <div class="card text-black border-secondary col-1 text-center">
+                        <p class="time-text">5pm</p>
+                    </div>
+
+                    <!--the tasks that are scheduled for this hour are shown here-->
+                    <div class="card border-dark col-10 task" id ="5pm"style = "height: 60px" >
+
+                        <form class="taskform" id="fivepmtask">
+                            <b>Task: </b><input type="text" name="task">
+                          </form>
+
+                    </div>
+
+                    <!--the save button is displayed to save the inputted tasks to local storage-->
+                    <div class="card border-primary text-center col-1" >
+                        <div class="save">
+                            <img class = "save-image" src="lib/computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon.jpg" width="30rem" height="30rem">
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+            
+            <aside class="col-1"></aside>
+        </section>
+
+
+    </main>
+    
+    <!--Bootstrap components, moment.JS and script file linked-->
+    <script src="lib/moment/moment.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

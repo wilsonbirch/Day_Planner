@@ -4,7 +4,7 @@ var date = moment().format('LLL');;
 var time = moment().format('LT');
 var i=0;
 
-
+//initialize function sets the proper colours for the day planner blocks, pulls any tasks from local storage or clears it at the beginning of a new day or end of the day
 function initializeDayPlanner() {
     $("#date-time").empty();
     $("#date-time").text(date);
@@ -15,6 +15,7 @@ function initializeDayPlanner() {
     if (currentHour <=8) {
 
         $("#9am, #10am, #11am, #12pm, #1pm, #2pm, #3pm, #4pm, #5pm").addClass("bg-secondary")
+        localStorage.clear();
 
     }
 
@@ -89,22 +90,29 @@ function initializeDayPlanner() {
 
     }
 
+    
     if(currentHour > 17){
         alert("all tasks completed for today!")
         $("#9am, #10am, #11am, #12pm, #1pm, #2pm, #3pm, #4pm, #5pm").addClass("bg-success");
+        localStorage.clear();
     }
     
+    //pull any tasks from local storage and write them to the day planner
+    $("#nineamtasktext").text(localStorage.getItem("nine"));
+    $("#tenamtasktext").text(localStorage.getItem("ten"));
+    $("#elevenamtasktext").text(localStorage.getItem("eleven"));
+    $("#twelvepmtasktext").text(localStorage.getItem("twelve"));
+    $("#onepmtasktext").text(localStorage.getItem("one"));
+    $("#twopmtasktext").text(localStorage.getItem("two"));
+    $("#threepmtasktext").text(localStorage.getItem("three"));
+    $("#fourpmtasktext").text(localStorage.getItem("four"));
+    $("#fivepmtasktext").text(localStorage.getItem("five"));
+
+    
+
 }
 
-function calendarFromStorage() {
-    //add items saved for this day, do this last
-}
-
-//<form>
-//<input type="text" for = "task" class="input-text">
-//<label>Enter Task Here</label>
-//</form>
-
+//on click function the task form for each hour will show
 $("#9am").on("click", function(){
 
     $("#nineamtask").show(event);
@@ -156,80 +164,168 @@ $("#fourpmtask").show(event);
 $("#5pm").on("click", function(event){
 
 $("#fivepmtask").show(event);
+$("#fivepmtasktext").empty();
 
 })
 
-   
-        
-$("#ninamtask").submit(function(event){
+//when any task is submitted preventDefault so the screen stays open
+$(".taskform").submit(function(event){
     event.preventDefault();
-    var nineamtask = $("#nineamtask: input")
-    console.log($nineamtask);
+    console.log("works");
 
 });
 
+//give the option to submit a task both with the save button and enter (9am)
+$("#9amsave").on("click", function(event){
+    var nineamtask = $("#nineamtask input").val();
+    $("#nineamtask").hide();
+    $("#nineamtasktext").text(nineamtask);
+    localStorage.setItem("nine", nineamtask);
+})
 
 
-// $("#10amsave").on("click", function(event){
+$("#nineamtask").submit(function(){
+    var nineamtask = $("#nineamtask input").val();
+    $("#nineamtask").hide();
+    $("#nineamtasktext").text(nineamtask);
+    localStorage.setItem("nine", nineamtask);
 
-//     event.preventDefault();
-//     console.log("works");
+})
 
-// })
+//give the option to submit a task both with the save button and enter (10am)
+$("#10amsave").on("click", function(event){
+    var tenamtask = $("#tenamtask input").val();
+    $("#tenamtask").hide();
+    $("#tenamtasktext").text(tenamtask);
+    localStorage.setItem("ten", tenamtask);
+    
+})
 
-// $("#11amsave").on("click", function(event){
+$("#tenamtask").submit(function(){
+    var tenamtask = $("#tenamtask input").val();
+    $("#tenamtask").hide();
+    $("#tenamtasktext").text(tenamtask);
+    localStorage.setItem("ten", tenamtask);
+    
+})
 
-//     event.preventDefault();
-//     console.log("works");
+//give the option to submit a task both with the save button and enter (11am)
+$("#11amsave").on("click", function(event){
+    var elevenamtask = $("#elevenamtask input").val();
+    $("#elevenamtask").hide();
+    $("#elevenamtasktext").text(elevenamtask);
+    localStorage.setItem("eleven", elevenamtask);
+    
+})
 
-// })
+$("#elevenamtask").submit(function(){
+    var elevenamtask = $("#elevenamtask input").val();
+    $("#elevenamtask").hide();
+    $("#elevenamtasktext").text(elevenamtask);
+    localStorage.setItem("eleven", elevenamtask);
+    
+})
 
-// $("#12pmsave").on("click", function(event){
+//give the option to submit a task both with the save button and enter (12pm)
+$("#12pmsave").on("click", function(event){
+    var twelvepmtask = $("#twelvepmtask input").val();
+    $("#twelvepmtask").hide();
+    $("#twelvepmtasktext").text(twelvepmtask);
+    localStorage.setItem("twelve", twelvepmtask);
+    
+})
 
-//     event.preventDefault();
-//     console.log("works");
+$("#twelvepmtask").submit(function(){
+    var twelvepmtask = $("#twelvepmtask input").val();
+    $("#twelvepmtask").hide();
+    $("#twelvepmtasktext").text(twelvepmtask);
+    localStorage.setItem("twelve", twelvepmtask);
+    
+})
 
-// })
+//give the option to submit a task both with the save button and enter (1pm)
+$("#1pmsave").on("click", function(event){
+    var onepmtask = $("#onepmtask input").val();
+    $("#onepmtask").hide();
+    $("#onepmtasktext").text(onepmtask);
+    localStorage.setItem("one", onepmtask);
+    
+})
 
-// $("#1pmsave").on("click", function(event){
+$("#onepmtask").submit(function(){
+    var onepmtask = $("#onepmtask input").val();
+    $("#onepmtask").hide();
+    $("#onepmtasktext").text(onepmtask);
+    localStorage.setItem("one", onepmtask);
+    
+})
 
-//     event.preventDefault();
-//     console.log("works");
+//give the option to submit a task both with the save button and enter (2pm)
+$("#2pmsave").on("click", function(event){
+    var twopmtask = $("#twopmtask input").val();
+    $("#twopmtask").hide();
+    $("#twopmtasktext").text(twopmtask);
+    localStorage.setItem("two", twopmtask);
+    
+})
 
-// })
+$("#twopmtask").submit(function(){
+    var twopmtask = $("#twopmtask input").val();
+    $("#twopmtask").hide();
+    $("#twopmtasktext").text(twopmtask);
+    localStorage.setItem("two", twopmtask);
+    
+})
 
-// $("#2pmsave").on("click", function(event){
+//give the option to submit a task both with the save button and enter (3pm)
+$("#3pmsave").on("click", function(event){
+    var threepmtask = $("#threepmtask input").val();
+    $("#threepmtask").hide();
+    $("#threepmtasktext").text(threepmtask);
+    localStorage.setItem("three", threepmtask);
+    
+})
 
-//     event.preventDefault();
-//     console.log("works");
+$("#threepmtask").submit(function(){
+    var threepmtask = $("#threepmtask input").val();
+    $("#threepmtask").hide();
+    $("#threepmtasktext").text(threepmtask);
+    localStorage.setItem("three", threepmtask);
+    
+})
 
-// })
+//give the option to submit a task both with the save button and enter (4pm)
+$("#4pmsave").on("click", function(event){
+    var fourpmtask = $("#fourpmtask input").val();
+    $("#fourpmtask").hide();
+    $("#fourpmtasktext").text(fourpmtask);
+    localStorage.setItem("four", fourpmtask);
+    
+})
 
-// $("#3pmsave").on("click", function(event){
+$("#fourpmtask").submit(function(){
+    var fourpmtask = $("#fourpmtask input").val();
+    $("#fourpmtask").hide();
+    $("#fourpmtasktext").text(fourpmtask);
+    localStorage.setItem("four", fourpmtask);
+    
+})
 
-//     event.preventDefault();
-//     console.log("works");
-
-// })
-
-// $("#4pmsave").on("click", function(event){
-
-//     event.preventDefault();
-//     console.log("works");
-
-// })
-
-// $("#5pmsave").on("click", function(event){
-
-//     event.preventDefault();
-//     console.log("works");
-
-// })
-
-
-
-
-
+//give the option to submit a task both with the save button and enter (5pm)
+$("#5pmsave").on("click", function(event){
+    var fivepmtask = $("#fivepmtask input").val();
+    $("#fivepmtask").hide();
+    $("#fivepmtasktext").text(fivepmtask);
+    localStorage.setItem("five", fivepmtask);
+    
+})
+$("#fivepmtask").submit(function(){
+    var fivepmtask = $("#fivepmtask input").val();
+    $("#fivepmtask").hide();
+    $("#fivepmtasktext").text(fivepmtask);
+    localStorage.setItem("five", fivepmtask);
+    
+})
 
 initializeDayPlanner()
 

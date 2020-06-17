@@ -149,15 +149,85 @@ $("#threepmtask").show(event);
 
 $("#4pm").on("click", function(event){
 
-$("#fourpmtask").toggle(event);
+$("#fourpmtask").show(event);
 
 })
 
 $("#5pm").on("click", function(event){
 
-$("#fivepmtask").toggle(event);
+$("#fivepmtask").show(event);
 
 })
+
+   
+        
+$("#ninamtask").submit(function(event){
+    event.preventDefault();
+    var nineamtask = $("#nineamtask: input")
+    console.log($nineamtask);
+
+});
+
+
+
+// $("#10amsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#11amsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#12pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#1pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#2pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#3pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#4pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+// $("#5pmsave").on("click", function(event){
+
+//     event.preventDefault();
+//     console.log("works");
+
+// })
+
+
+
 
 
 

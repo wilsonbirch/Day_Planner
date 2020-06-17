@@ -1,6 +1,6 @@
 # HW5_Day-Planner
 
-This repo contains the 5th homework assignment for the Carleton University Coding Bootcamp. A day planner was created using Moment.js and jQuery.
+This repo contains the 5th homework assignment for the Carleton University Coding Bootcamp. A day planner was created using Moment.js and jQuery. Link to the deployed application: https://wilsonbirch.github.io/HW5_Day-Planner/
 
 # 05 Third-Party APIs: Work Day Scheduler
 

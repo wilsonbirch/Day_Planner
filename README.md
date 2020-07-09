@@ -36,7 +36,7 @@ THEN the saved events persist
 
 The following image demonstrates the application functionality:
 
-![day planner demo](https://github.com/wilsonbirch/HW5_Day-Planner/blob/master/TM_screenshot.png)
+![day planner demo](https://github.com/wilsonbirch/HW5_Day-Planner/blob/master/TM_screenshot_.png)
 
 ## Review
 

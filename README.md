@@ -34,9 +34,9 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+The following image demonstrates the application functionality:
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+![day planner demo](https://github.com/wilsonbirch/HW5_Day-Planner/blob/master/TM_screenshot.png)
 
 ## Review
 
